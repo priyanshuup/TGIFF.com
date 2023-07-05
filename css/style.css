@@ -133,7 +133,9 @@ body {
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-
+  header {
+    position:relative;
+  }
   .nav-menu {
     position: fixed;
     left: -100%;
@@ -154,7 +156,7 @@ body {
   }
 
   .nav-menu.active {
-    height: 80%;
+    height: 50%;
     left: 0;
   }
 
@@ -164,18 +166,19 @@ body {
   section #home .homediv{
     height: 40vh;
   }
-  section .borderdiv,section.categoriescontents, section .eventdiv,section .upevents{
+ 
+  section .borderdiv,section .categoriescontents, section .eventdiv,section .upevents,section .risingdiv{
     top: 0;
     left: 0;
     right: 0;
   }
 
-  section .homediv .borderdiv h1 {
+  section .homediv .borderdiv h1{
     font-size: 2.2vh;
     text-align: center;
   }
-  section .hometextdiv h1{
-    font-size: 1.8vw;
+  section .hometextdiv h1,#main section .photocontainer h1{
+    font-size: 3vh;
   }
   #filmsubmission .youtubediv {
     overflow: hidden;
@@ -195,26 +198,34 @@ body {
   }
   section 
   #facilities h1 {
-    margin: 1vh 0;
-    font-size: 2.5vh;
+    margin: 2vh 0;
+    font-size: 2.3vh;
   }
   .photocontainer .gallery .dream{
     width: 100%;
       display: flex;
       flex-direction: column;
     }
+
+    #main section .photocontainer{
+      padding: 20px;
+    }
+    
   #main footer h5, #main footer i{
     font-size: 1.2vh;
   }
   .container .slide-text {
     width: 550px;
   }
+  section .container{
+    margin-top: 0vh;
+  }
   section #home,#filmsubmission {
     flex-wrap: wrap;
   }
-  section .hometextdiv h4, section .photocontainer h4, section #facilities h4 {
+  #main section h4{
     /* text-align: justify; */
-    font-size: 2.5vh;
+    font-size: 2.2vh;
   }
   #main section .borderdiv{
     padding: 30px 10px;
@@ -227,6 +238,15 @@ body {
     font-size: 1.3vh;
     text-align: center;
   }
+  section .imgsntxt h2 {
+    margin-top: 1vh;
+    font-size: 2.5vh;
+  }
+
+  #main .f5{
+    display: none;
+  }
+  
 }
 @media (min-width: 768px) and (max-width: 900px) {
   section #home,#filmsubmission {
@@ -242,7 +262,7 @@ body {
   .hometextdiv h4,.photocontainer h4 {
     text-align: justify;
   }
-  
+ 
 }
 
 
@@ -315,7 +335,7 @@ body {
 
 .hometextdiv {
   /* min-height: 50vh; */
-  width: 650px;
+  width: 750px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -324,12 +344,12 @@ body {
   padding: 10px;
 }
 .hometextdiv h1,.photocontainer h1 {
-  font-size: 2.5vh;
-  font-family: "Bulgatry";
+  font-size: 5vh;
+  font-family: 'Cinzel', serif;
   font-weight: 100;
-  letter-spacing: 10px;
+  letter-spacing: 4px;
   margin: 5vh;
-  line-height: 7vh;
+  /* line-height: 7vh; */
   text-align: center;
   color: rgb(255, 255, 255);
   border-bottom: 2px solid #ff9d00;
@@ -342,18 +362,12 @@ body {
   text-align: justify;
 
 }
-#facilities h4 {
-  font-size: 2.8vh;
-  color: #030303;
-  font-family: "Palatino Linotype";
-  font-weight: 300;
-  text-align: center;
-}
+
 .hometextdiv button {
   position: relative;
   background: #ffffff;
   color: #000000;
-  font-size: 3.5vh;
+  font-size:2vh;
   padding: 0.4rem 3rem;
   margin: 3vh 0;
   font-family: "Palatino Linotype";
@@ -372,6 +386,8 @@ body {
   justify-content: space-around;
   /* flex-wrap: wrap; */
   background-color: rgb(255, 255, 255);
+  overflow: hidden;
+
 }
 
 #filmsubmission h4 {
@@ -415,14 +431,20 @@ iframe {
 
 #facilities h1 {
   margin: 1vh 0;
-  font-size: 4vh;
-  letter-spacing: 0.5vh;
-  font-family: "Ethereal Thin";
+  font-size: 5vh;
+  letter-spacing: 4px;
+  font-family: 'Cinzel', serif;
   color: rgb(0, 0, 0);
   border-bottom: 2px solid #ff9d00;
   padding: 0 1vh;
 }
-
+#facilities h4 {
+  font-size: 2.8vh;
+  color: #030303;
+  font-family: "Palatino Linotype";
+  font-weight: 300;
+  text-align: center;
+}
 #facilities span {
   color: #f7b605;
 }
@@ -515,8 +537,9 @@ iframe {
 }
 .imgsntxt h2 {
   margin-top: 1vh;
-  font-size: 3.2vh;
-  font-family: "Palatino Linotype";
+  font-size: 3vh;
+  letter-spacing: 4px;
+  font-family: "Ethereal Thin";
   font-weight: 600;
   color: #000000;
 }
@@ -558,6 +581,8 @@ iframe {
   position: relative;
   font-family: "Palatino Linotype";
   padding-top: 5vh;
+  overflow: hidden;
+
 }
 
 #pg71 {
