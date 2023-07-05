@@ -39,7 +39,6 @@ gsap.from("#home>.homediv", {
        start:"top 20%",
         // end:"top 80%",
       //   pin: true,
-           markers:true,
       scroller: "#main",
       trigger: "#filmsubmission",
     },
