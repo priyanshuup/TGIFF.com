@@ -4,23 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/loco.css" />
+    <link rel="stylesheet" href="/css/contactstyle.css" />
   </head>
-    <style>
-      .contactdiv{
-        position: relative;
-        right: 2vh;
-        /* background-color:rebeccapurple ; */
-      }
-    </style>
   <body>
     <header>
       <nav class="navbar">
@@ -78,9 +81,9 @@
               <div class="subdet">
                 <i class="ri-map-pin-line"></i>
                 <div class="addr">
-                  <h4>C-618A, M3M URBANA,</h4>
-                  <h4>SECTOR 67</h4>
-                  <h4>GURGAON 122102</h4>
+                  <h4>C-618A, M3M Urbana,</h4>
+                  <h4>Sector 67</h4>
+                  <h4>Gurgaon 122102</h4>
                 </div>
               </div>
             </div>
@@ -99,14 +102,89 @@
               Feel free to reach out to us via email or phone, and we will be
               delighted to assist you.
             </h4>
-       
           </div>
-          <div class="homediv f5">
-            <div class="borderdiv contactdiv">
-              <div class="imgdiv">
-                <img src="./img/logopart.png" alt="" />
+          <div class="contactdiv">
+            <div class="row">
+              <div class="col">
+                <div class="contact-wrap">
+                  <h3 class="text-center">Let's Talk</h3>
+                  <form
+                    class="mb-3"
+                    method="post"
+                    id="contactForm"
+                    name="contactForm"
+                  >
+                    <div class="row">
+                      <div class="col-md-6 form-group mb-3">
+                        <label for="" class="col-form-label">Name *</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="name"
+                          id="name"
+                          placeholder="Your name"
+                        />
+                      </div>
+                      <div class="col-md-6 form-group mb-3">
+                        <label for="" class="col-form-label">Email *</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          name="email"
+                          id="email"
+                          placeholder="Your email"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-12 form-group mb-3">
+                        <label for="budget" class="col-form-label"
+                          >Subject</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="subject"
+                          id="subject"
+                          placeholder="Your subject"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="row mb-5">
+                      <div class="col-md-12 form-group mb-3">
+                        <label for="message" class="col-form-label"
+                          >Message *</label
+                        >
+                        <textarea
+                          class="form-control"
+                          name="message"
+                          id="message"
+                          cols="30"
+                          rows="4"
+                          placeholder="Write your message"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center">
+                      <div class="col-md-5 form-group text-center">
+                        <input
+                          type="submit"
+                          value="Send Message"
+                          class="btn btn-block btn-primary rounded-0 py-2 px-4"
+                        />
+                        <span class="submitting"></span>
+                      </div>
+                    </div>
+                  </form>
+
+                  <div id="form-message-warning mt-4"></div>
+                  <div id="form-message-success">
+                    Your message was sent, thank you!
+                  </div>
+                </div>
               </div>
-              <h1>THE GREAT INDIAN FILM FESTIVAL</h1>
             </div>
           </div>
         </div>
@@ -157,8 +235,17 @@
       </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/loco.js"></script>
+    <script src="js/gsap.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
