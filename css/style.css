@@ -77,10 +77,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
   gap: 60px;
-  /* margin-top: 20px; */
   padding: 0 100px;
-  /* background-color: red; */
 }
 
 .nav-item a {
@@ -220,11 +219,10 @@ body {
   section .container{
     margin-top: 0vh;
   }
-  section #home,#filmsubmission {
+  section #home,section #filmsubmission,section #events, section #upeve{
     flex-wrap: wrap;
   }
   #main section h4{
-    /* text-align: justify; */
     font-size: 2.2vh;
   }
   #main section .borderdiv{
@@ -249,12 +247,9 @@ body {
   
 }
 @media (min-width: 768px) and (max-width: 900px) {
-  section #home,#filmsubmission {
+  section #home,section #filmsubmission,section #events,section #upeve {
     flex-wrap: wrap;
   }
-  /* section .hometextdiv {
-    width: 600px;
-  } */
   #filmsubmission .youtubediv {
     overflow: hidden;
     width: 90%;
@@ -270,32 +265,29 @@ body {
 
 #home {
   position: relative;
-  min-height: 80vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: space-around;
-  /* flex-wrap: nowrap; */
   align-items: center;
   gap: 10px;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(7, 7, 7);
   overflow: hidden;
 }
 
 .homediv {
   height: 60vh;
-  width: 50vw;
+  width: 850px;
   min-width: 350px;
   display: flex;
   align-items: flex-end;
   justify-content: baseline;
   border: 3px solid white;
-  /* background-color: aqua; */
 }
 
 .borderdiv {
   position: relative;
   top: 2vh;
-  /* left: 2vh; */
   height: 100%;
   width: 100%;
   display: flex;
@@ -334,14 +326,12 @@ body {
 }
 
 .hometextdiv {
-  /* min-height: 50vh; */
   width: 750px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  /* background-color: red; */
-  padding: 10px;
+  padding: 20px;
 }
 .hometextdiv h1,.photocontainer h1 {
   font-size: 5vh;
@@ -349,14 +339,13 @@ body {
   font-weight: 100;
   letter-spacing: 4px;
   margin: 5vh;
-  /* line-height: 7vh; */
   text-align: center;
   color: rgb(255, 255, 255);
   border-bottom: 2px solid #ff9d00;
 }
 .hometextdiv h4 {
   font-size: 2.8vh;
-  color: #fff;
+  color: #ffffff;
   font-family: "Palatino Linotype";
   font-weight: 300;
   text-align: justify;
@@ -372,7 +361,6 @@ body {
   margin: 3vh 0;
   font-family: "Palatino Linotype";
   border: none;
-  /* border-radius: 30px; */
   font-weight: 600;
   cursor: pointer;
 }
@@ -384,7 +372,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  /* flex-wrap: wrap; */
   background-color: rgb(255, 255, 255);
   overflow: hidden;
 
@@ -403,17 +390,13 @@ body {
 .youtubediv {
   overflow: hidden;
   width: 50%;
-  /* Keep it the right aspect-ratio */
   aspect-ratio: 16/9;
-  /* No clicking/hover effects */
   pointer-events: none;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 iframe {
-  /* Extend it beyond the viewport... */
   width: 300%;
   height: 100%;
-  /* ...and bring it back again */
   margin-left: -100%;
 }
 
@@ -456,7 +439,6 @@ iframe {
   justify-content: center;
   padding: 0.5vh;
   overflow: hidden;
-  /* background-color: purple; */
 }
 
 .swiper {
@@ -468,8 +450,6 @@ iframe {
   justify-content: center;
   gap: 50px;
   flex-direction: column;
-  /* background-color: #daf277; */
-  /* overflow: hidden; */
 }
 .swiper-slide {
   display: flex;
@@ -528,7 +508,6 @@ iframe {
 .reviewimage {
   height: 60vh;
   min-width: 20vw;
-  /* background-color: #daf277; */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .reviewimage img {
@@ -572,7 +551,7 @@ iframe {
 
 #pg7maincontents {
   width: 100%;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(3, 3, 3);
   color: #fff;
   display: flex;
   align-items: center;
@@ -600,17 +579,22 @@ iframe {
   cursor: pointer;
 }
 
-#pg71 h1 {
+#pg7maincontents h1 {
   font-size: 2.8vw;
   text-align: center;
   font-family: "Palatino Linotype";
   font-weight: 200;
+  color: #fff;
 }
 #pg71 h2 {
   font-size: 2vw;
+  font-family: "Palatino Linotype";
+  color: #fff;
 }
 #pg71 h4 {
   font-size: 1.2vw;
+  font-family: "Palatino Linotype";
+  color: #fff;
 }
 #col1 {
   width: 23vw;
@@ -645,7 +629,6 @@ iframe {
 }
 
 footer {
-  /* height: 5vh; */
   width: 100%;
   background-color: #000000;
   color: #fff;
@@ -665,6 +648,7 @@ footer h5 {
   font-size: 2vh;
   font-family: "Palatino Linotype";
   font-weight: 200;
+  color: #fff;
 }
 
 /* Events Page Starts here  */
@@ -676,13 +660,12 @@ footer h5 {
 
 section #events {
   position: relative;
-  min-height: 90vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
   align-items: center;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(7, 7, 7);
   overflow: hidden;
 }
 
@@ -721,7 +704,6 @@ section #events {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
   align-items: center;
   background-color: rgb(0, 0, 0);
   overflow: hidden;
@@ -772,9 +754,10 @@ section #events {
   font-family: "Palatino Linotype";
   overflow: hidden;
   transition: 0.5s all;
-  background-color: #000;
+  background-color: #000000;
   color: #fff;
 }
+
 
 .slide-container {
   height: 100%;
@@ -798,14 +781,12 @@ section #events {
 }
 
 .slide-text {
-  /* height: 850px; */
   width: 850px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 15px;
   perspective: 100px;
-  /* background-color: red; */
   text-align: center;
 }
 
@@ -820,21 +801,13 @@ section #events {
   animation-play-state: paused;
 }
 .container:hover{
-  /* animation-play-state: paused; */
-  /* animation-name: none; */
   cursor: pointer;
 }
 
 .slide-text h1:hover{
-  /* font-size: 2.9vh; */
   scale: 1.2;
-  /* color: #ffffff; */
-  /* background-color: #000; */
   padding: 2vh;
 }
-
-
-/* Categories CSS starts here */
 
 .categoriescontents{
   position: relative;
@@ -859,7 +832,6 @@ section #events {
   justify-content: space-around;
   background-color: #000;
   color: #fff;
-  /* padding: 2vh; */
   cursor: pointer;
 }
 .categoriessubcontents h3{
@@ -896,7 +868,6 @@ section #events {
   border: 2px solid #fff;
   overflow: hidden;
   transform: rotate(-14deg);
-  /* display: none; */
 }
 
 .catimgbox img{
@@ -956,7 +927,6 @@ width: 33%;
 
 .contactdet{
   width: 100%;
-  /* background-color: ; */
   display: flex;
   color: #fff;
   align-items: center;
@@ -968,7 +938,6 @@ width: 33%;
   font-size: 3vh;
 }
 .subdet{
-  /* background-color: rgb(33, 167, 15); */
   display: flex;
   color: #fff;
   align-items: center;
@@ -977,6 +946,9 @@ width: 33%;
   gap: 1.2vh;
 }
 
+.contactdet h4{
+  font-size: 2.2vh;
+}
 .addr{
   display: flex;
   flex-direction: column;
@@ -987,7 +959,6 @@ width: 33%;
   width: 30%;
   display: flex;
   gap: 2vh;
-  /* justify-content: space-around; */
   align-items: flex-start;
-  /* background-color: purple; */
 }
+
