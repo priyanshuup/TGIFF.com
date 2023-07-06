@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -56,7 +59,7 @@
     </header>
     <div id="main" data-scroll data-scroll-section>
       <section>
-        <div id="events">
+        <div id="events"data-scroll data-scroll-speed="2">
           <div class="hometextdiv">
             <h1>Categories</h1>
             <h4>
@@ -70,7 +73,7 @@
             <button>Submit Your Film</button>
           </div>
           <div class="homediv">
-            <div class="categoriescontents">
+            <div class="categoriescontents"data-scroll data-scroll-speed="1">
               <div class="categoriessubcontents">
                 <h3>Mobile Shorts</h3>
                 <div class="catimgbox">
@@ -248,9 +251,12 @@
         <h5>All rights reserved</h5>
       </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/loco.js"></script>
+    <script src="js/gsap.js"></script>
   </body>
 </html>
