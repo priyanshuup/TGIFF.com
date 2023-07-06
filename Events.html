@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Events</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/loco.css" />
     <link
@@ -68,13 +71,13 @@
             </h4>
             <button>Know More</button>
           </div>
-          <div class="homediv">
+          <div class="homediv"data-scroll data-scroll-speed="2">
             <div class="upevents"></div>
           </div>
         </div>
         <div id="upeve">
           <div class="homediv">
-            <div class="eventdiv"></div>
+            <div class="eventdiv" data-scroll data-scroll-speed="2"></div>
           </div>
           <div class="hometextdiv">
             <h1>Recent Events</h1>
@@ -95,55 +98,57 @@
           </div>
         </div>
         <div id="pg7maincontents">
-            <div id="pg71">
-              <div id="col1">
-                <div id="p7circle"></div>
-                <h1>
-                  Become Our <br />
-                  Partner Today
-                </h1>
-                <div id="cont">
-                  <h2>Let's talk</h2>
-                  <img src="./img/arrow.png" alt="" />
-                </div>
-              </div>
-              <div id="col2">
-                <h2>Learn</h2>
-                <h4><a href="#events">About</a></h4>
-                <h4><a href="/shop">Rising Star</a></h4>
-              </div>
-              <div id="col5">
-                <h2>Explore</h2>
-                <h4><a href="#homepage">Categories</a></h4>
-                <h4><a href="#musicpage">Events</a></h4>
-                <h4><a href="./gallery.html">News</a></h4>
-              </div>
-              <div id="col3">
-                <h2>Find Us</h2>
-                <h4>
-                  C-618A <br />
-                  M3M URBANA <br />
-                  SECTOR 67 <br />
-                  GURGAON 122102
-                </h4>
+          <div id="pg71">
+            <div id="col1">
+              <div id="p7circle"></div>
+              <h1>
+                Become Our <br />
+                Partner Today
+              </h1>
+              <div id="cont">
+                <h2>Let's talk</h2>
+                <img src="./img/arrow.png" alt="" />
               </div>
             </div>
+            <div id="col2">
+              <h2>Learn</h2>
+              <h4><a href="#events">About</a></h4>
+              <h4><a href="/shop">Rising Star</a></h4>
+            </div>
+            <div id="col5">
+              <h2>Explore</h2>
+              <h4><a href="#homepage">Categories</a></h4>
+              <h4><a href="#musicpage">Events</a></h4>
+              <h4><a href="./gallery.html">News</a></h4>
+            </div>
+            <div id="col3">
+              <h2>Find Us</h2>
+              <h4>
+                C-618A <br />
+                M3M URBANA <br />
+                SECTOR 67 <br />
+                GURGAON 122102
+              </h4>
+            </div>
           </div>
-        </section>
-        <footer>
-          <div class="icons">
-            <i class="ri-instagram-fill"></i>
-            <i class="ri-facebook-circle-fill"></i>
-            <i class="ri-twitter-fill"></i>
-          </div>
-          <h5>Copyright ©TGIFF 2023</h5>
-          <h5>All rights reserved</h5>
-        </footer>
+        </div>
       </section>
+      <footer>
+        <div class="icons">
+          <i class="ri-instagram-fill"></i>
+          <i class="ri-facebook-circle-fill"></i>
+          <i class="ri-twitter-fill"></i>
+        </div>
+        <h5>Copyright ©TGIFF 2023</h5>
+        <h5>All rights reserved</h5>
+      </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/loco.js"></script>
+    <script src="js/gsap.js"></script>
   </body>
 </html>
