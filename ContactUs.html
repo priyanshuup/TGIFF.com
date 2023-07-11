@@ -1,251 +1,1178 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/loco.css" />
-    <link rel="stylesheet" href="/css/contactstyle.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <a class="logo" href="index.html">TGIFF</a>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Palatino Linotype";
+}
 
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="Events.html" class="nav-link">Events</a>
-          </li>
-          <li class="nav-item">
-            <a href="Risingstar.html" class="nav-link">Rising Star</a>
-          </li>
-          <li class="nav-item">
-            <a href="Categories.html" class="nav-link">Category</a>
-          </li>
-          <li class="nav-item">
-            <a href="Photos.html" class="nav-link">Photos</a>
-          </li>
-          <li class="nav-item">
-            <a href="News.html" class="nav-link">News</a>
-          </li>
-          <li class="nav-item">
-            <a href="ContactUs.html" class="nav-link">Contact Us</a>
-          </li>
-        </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
-    </header>
-    <div id="main" data-scroll data-scroll-section>
-      <section>
-        <div id="events">
-          <div class="hometextdiv">
-            <h1>Contact Us</h1>
-            <h4>
-              For any inquiries, assistance, or collaboration opportunities, The
-              Great Indian Film Festival team is here to provide prompt and
-              helpful support. Please find below our contact information:
-            </h4>
-            <div class="contactdet">
-              <div class="subdet">
-                <i class="ri-mail-fill"></i>
-                <div class="addr">
-                  <h4>: info@tgiffestival.com</h4>
-                  <h4>: risingstar@tgiffestival.com</h4>
-                  <h4>: tgiffestival@gmail.com</h4>
-                </div>
-              </div>
-              <div class="subdet">
-                <i class="ri-map-pin-line"></i>
-                <div class="addr">
-                  <h4>C-618A, M3M Urbana,</h4>
-                  <h4>Sector 67</h4>
-                  <h4>Gurgaon 122102</h4>
-                </div>
-              </div>
-            </div>
-            <div class="contactdet">
-              <i class="ri-phone-fill"> : +91 - 81301 &nbsp;58385</i>
-              <div class="iconz">
-                <i class="ri-instagram-line"></i>
-                <i class="ri-twitter-fill"></i>
-                <i class="ri-facebook-fill"></i>
-              </div>
-            </div>
-            <h4>
-              Our dedicated and knowledgeable team is available to address your
-              queries regarding ticketing, film submissions, sponsorship
-              opportunities, press inquiries, and general festival information.
-              Feel free to reach out to us via email or phone, and we will be
-              delighted to assist you.
-            </h4>
-          </div>
-          <div class="contactdiv">
-            <div class="row">
-              <div class="col">
-                <div class="contact-wrap">
-                  <h3 class="text-center">Let's Talk</h3>
-                  <form
-                    class="mb-3"
-                    method="post"
-                    id="contactForm"
-                    name="contactForm"
-                  >
-                    <div class="row">
-                      <div class="col-md-6 form-group mb-3">
-                        <label for="" class="col-form-label">Name *</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="name"
-                          id="name"
-                          placeholder="Your name"
-                        />
-                      </div>
-                      <div class="col-md-6 form-group mb-3">
-                        <label for="" class="col-form-label">Email *</label>
-                        <input
-                          type="email"
-                          class="form-control"
-                          name="email"
-                          id="email"
-                          placeholder="Your email"
-                        />
-                      </div>
-                    </div>
+header {
+  position: absolute;
+  min-height: 70px;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
-                    <div class="row">
-                      <div class="col-md-12 form-group mb-3">
-                        <label for="budget" class="col-form-label"
-                          >Subject</label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          name="subject"
-                          id="subject"
-                          placeholder="Your subject"
-                        />
-                      </div>
-                    </div>
 
-                    <div class="row mb-5">
-                      <div class="col-md-12 form-group mb-3">
-                        <label for="message" class="col-form-label"
-                          >Message *</label
-                        >
-                        <textarea
-                          class="form-control"
-                          name="message"
-                          id="message"
-                          cols="30"
-                          rows="4"
-                          placeholder="Write your message"
-                        ></textarea>
-                      </div>
-                    </div>
-                    <div class="row justify-content-center">
-                      <div class="col-md-5 form-group text-center">
-                        <input
-                          type="submit"
-                          value="Send Message"
-                          class="btn btn-block btn-primary rounded-0 py-2 px-4"
-                        />
-                        <span class="submitting"></span>
-                      </div>
-                    </div>
-                  </form>
+li {
+  list-style: none;
+  font-family: "Ethereal Thin";
+}
 
-                  <div id="form-message-warning mt-4"></div>
-                  <div id="form-message-success">
-                    Your message was sent, thank you!
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="pg7maincontents">
-          <div id="pg71">
-            <div id="col1">
-              <div id="p7circle"></div>
-              <h1>
-                Become Our <br />
-                Partner Today
-              </h1>
-              <div id="cont">
-                <h2>Let's talk</h2>
-                <img src="./img/arrow.png" alt="" />
-              </div>
-            </div>
-            <div id="col2">
-              <h2>Learn</h2>
-              <h4><a href="#events">About</a></h4>
-              <h4><a href="/shop">Rising Star</a></h4>
-            </div>
-            <div id="col5">
-              <h2>Explore</h2>
-              <h4><a href="#homepage">Categories</a></h4>
-              <h4><a href="#musicpage">Events</a></h4>
-              <h4><a href="./gallery.html">News</a></h4>
-            </div>
-            <div id="col3">
-              <h2>Find Us</h2>
-              <h4>
-                C-618A <br />
-                M3M URBANA <br />
-                SECTOR 67 <br />
-                GURGAON 122102
-              </h4>
-            </div>
-          </div>
-        </div>
-      </section>
-      <footer>
-        <div class="icons">
-          <i class="ri-instagram-fill"></i>
-          <i class="ri-facebook-circle-fill"></i>
-          <i class="ri-twitter-fill"></i>
-        </div>
-        <h5>Copyright ©TGIFF 2023</h5>
-        <h5>All rights reserved</h5>
-      </footer>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/loco.js"></script>
-    <script src="js/gsap.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/script.js"></script>
-  </body>
-</html>
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Ethereal Thin";
+}
+
+html,body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: 'Ethereal Thin';
+  src: url('../fonts/ethereal.thin.woff')  format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bulgatry";
+  src: url('../fonts/bulgatry.personal.woff')  format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Palatino Linotype";
+  src: url('../fonts/PalatinoLinotype.woff')  format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* navbar stars  */
+
+.navbar {
+  position: fixed;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 24px;
+  z-index: 9999;
+  overflow: hidden;
+  color: #fff;
+  background-color: #000000;
+}
+
+#main {
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  gap: 60px;
+  padding: 0 100px;
+}
+
+.nav-item a {
+  font-size: 1.5vw;
+  font-family: "Ethereal Thin";
+}
+
+.nav-link {
+  transition: 0.7s ease;
+}
+
+.nav-link:hover {
+  color: #ff9d00;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.logo {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+/* navbar ends  */
+
+/* Responsive Design Starts here  */
+
+@media (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  header {
+    position:relative;
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 50px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #000;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .nav-item {
+    margin: 16px 0;
+    font-size: 1.5rem;
+  }
+  .nav-item a {
+    font-size: 1.5rem;
+  }
+
+  .nav-menu.active {
+    height: 70%;
+    left: 0;
+  }
+
+  .logo {
+    display: block;
+  }
+  section #home .homediv{
+    min-height: 40vh;
+  }
+ 
+  section .borderdiv,section .categoriescontents, section .eventdiv,section .upevents,section .risingdiv{
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  section .homediv .borderdiv h1{
+    font-size: 2.2vh;
+    text-align: center;
+  }
+  section .hometextdiv h1,#main section .photocontainer h1{
+    font-size: 3vh;
+  }
+  #filmsubmission .youtubediv {
+    overflow: hidden;
+    width: 90%;
+  }
+
+  section #pg7maincontents {
+    display: none;
+  }
+  section #facilities .photodiv .image {
+    height: 150px;
+    width: 150px;
+  }
+
+  section #facilities .photodiv {
+    width: 80vw;
+  }
+  section 
+  #facilities h1 {
+    margin: 2vh 0;
+    font-size: 2.3vh;
+  }
+  .photocontainer .gallery .dream{
+    width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #main section .photocontainer{
+      padding: 20px;
+    }
+    
+  #main footer h5, #main footer i{
+    font-size: 1.2vh;
+  }
+  .container .slide-text {
+    width: 550px;
+  }
+  section .container{
+    margin-top: 0vh;
+  }
+  section #home,section #filmsubmission,section #events, section #upeve{
+    flex-wrap: wrap;
+  }
+  #main section h4{
+    font-size: 2.2vh;
+  }
+  #main section .borderdiv{
+    padding: 30px 10px;
+  }
+  #main section .catimgbox{
+    height: 120px;
+    width: 120px;
+  }
+  #main section .categoriessubcontents h1, #main section .categoriessubcontents h3{
+    font-size: 1.3vh;
+    text-align: center;
+  }
+  section .imgsntxt h2 {
+    margin-top: 1vh;
+    font-size: 2.5vh;
+  }
+
+  #main .f5{
+    display: none;
+  }
+
+#main #submit-form .inputBoxx,#main #submit-form .gender {
+  flex-wrap: wrap;
+}
+
+#main .submitopt{
+  /* height: 60vh; */
+  width: 90vw;
+  /* background-color: red; */
+}
+
+#main .submitopt .opthead h1{
+  font-size: 2.8vh;
+  letter-spacing: 2px;
+}
+#main #filmsubmission .submitopt h4{
+  font-size: 1.8vh;
+  letter-spacing: 2px;
+}
+
+#main #filmsubmission .submitopt .opthead i{
+  font-size:2rem;
+}
+}
+@media (min-width: 768px) and (max-width: 900px) {
+  section #home,section #filmsubmission,section #events,section #upeve {
+    flex-wrap: wrap;
+  }
+  #filmsubmission .youtubediv {
+    overflow: hidden;
+    width: 90%;
+  }
+  .hometextdiv h4,.photocontainer h4 {
+    text-align: justify;
+  }
+  header {
+    position:relative;
+  }
+
+  #main .submitopt{
+    /* height: 60vh; */
+    width: 70vw;
+    /* background-color: red; */
+  }
+  #main #filmsubmission .submitopt .opthead h1{
+    font-size:4vh;
+    letter-spacing: 2px;
+  }
+  #main #filmsubmission .submitopt .opthead i{
+    font-size:3rem;
+  }
+  #main #filmsubmission .submitopt h4{
+    font-size: 2.2vh;
+    letter-spacing: 2px;
+  }
+}
+
+
+/* Home Page Starts Here */
+
+#home {
+  position: relative;
+  min-height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(7, 7, 7);
+  overflow: hidden;
+}
+
+.homediv {
+  height: 60vh;
+  width: 850px;
+  min-width: 350px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: baseline;
+  border: 3px solid white;
+}
+
+.borderdiv {
+  position: relative;
+  top: 2vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  padding: 0 40px;
+}
+
+.borderdiv h1 {
+  font-size: 1.5vw;
+  font-weight: 600;
+  font-family: "Palatino Linotype";
+  text-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.imgdiv {
+  height: 40vh;
+  width: 100%;
+  background-color: rgb(247, 182, 5);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  overflow: hidden;
+}
+.imgdiv img {
+  height: 100%;
+  scale: 1;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.hometextdiv {
+  width: 750px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 20px;
+}
+.hometextdiv h1,.photocontainer h1 {
+  font-size: 5vh;
+  font-family: 'Cinzel', serif;
+  font-weight: 100;
+  letter-spacing: 4px;
+  margin: 5vh;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  border-bottom: 2px solid #ff9d00;
+}
+.hometextdiv h4 {
+  font-size: 2.8vh;
+  color: #ffffff;
+  font-family: "Palatino Linotype";
+  font-weight: 300;
+  text-align: justify;
+  line-height: 40px;
+}
+
+.hometextdiv button {
+  position: relative;
+  background: #ffffff;
+  color: #000000;
+  font-size:2vh;
+  padding: 0.4rem 3rem;
+  margin: 3vh 0;
+  font-family: "Palatino Linotype";
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+#filmsubmission {
+  position: relative;
+  padding: 2vh 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+
+}
+
+#filmsubmission h4 {
+  color: #000;
+  font-size: 2.8vh;
+}
+
+#filmsubmission button {
+  padding: 1vh 2vh;
+  background: black;
+  color: #fff;
+  cursor: pointer;
+}
+
+.submitopt{
+  height: 60vh;
+  width: 60vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  position: absolute;
+  padding:1rem 2rem;
+  top: 50%;
+  left: -100%;
+  transform: translate(-50%,-50%);
+  background-color: #000000;
+  z-index: 99999;
+  transition: 0.8s ease-in-out;
+  /* scale: 0; */
+  /* transform-origin:right; */
+}
+#main .submitopt.active {
+  left: 50%;
+}
+#main .submitopt h1{
+  font-size: 5vh;
+  letter-spacing: 15px;
+  color: white;
+  font-family: 'Cinzel', serif;
+  color: #ff9d00;
+  text-align: center;
+
+}
+#main .submitopt a{
+  cursor: pointer;
+}
+#main .submitopt h4{
+  font-size: 2.5vh;
+  color: #fff;
+  letter-spacing: 2px;
+}
+#main .opthead{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+}
+.opthead i{
+  width: 20%;
+  font-size: 4rem;
+  color: #fff;
+  cursor: pointer;
+}
+.filmicons{
+  /* height: 10vh; */
+  /* width: 40vw; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2vw;
+  /* background-color: red; */
+  overflow: hidden;
+  padding: 1vh;
+  margin: 1vh 0;
+}
+.filmicons a{
+  height: 8vh;
+}
+.filmicons a img{
+  height: 100%;
+  /* width: 100%; */
+  cursor: pointer;
+}
+.youtubediv {
+  overflow: hidden;
+  width: 50%;
+  aspect-ratio: 16/9;
+  pointer-events: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+iframe {
+  width: 300%;
+  height: 100%;
+  margin-left: -100%;
+}
+
+#facilities {
+  padding: 5vh 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Palatino Linotype";
+  text-align: center;
+  flex-direction: column;
+  overflow: hidden;
+
+}
+
+#facilities h1 {
+  margin: 1vh 0;
+  font-size: 5vh;
+  letter-spacing: 4px;
+  font-family: 'Cinzel', serif;
+  color: rgb(0, 0, 0);
+  border-bottom: 2px solid #ff9d00;
+  padding: 0 1vh;
+}
+#facilities h4 {
+  font-size: 2.8vh;
+  color: #030303;
+  font-family: "Palatino Linotype";
+  font-weight: 300;
+  text-align: center;
+}
+#facilities span {
+  color: #f7b605;
+}
+.slider_container {
+  height: 60vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5vh;
+  overflow: hidden;
+}
+
+.swiper {
+  position: relative;
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  flex-direction: column;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+}
+.photodiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 55vh;
+  min-width: 20vw;
+  color: #000;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0 1vh;
+  font-family: "Palatino Linotype";
+  text-align: center;
+}
+.imgsntxt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  border-bottom: 2px solid black;
+  overflow: hidden;
+}
+.photodiv .image {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+}
+.image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  scale: 1;
+  transition: ease-in-out 2s;
+}
+
+.photodiv img:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+
+.reviewimage {
+  height: 60vh;
+  min-width: 20vw;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.reviewimage img {
+  height: 100%;
+  width: 100%;
+}
+.imgsntxt h2 {
+  margin-top: 1vh;
+  font-size: 3vh;
+  letter-spacing: 4px;
+  font-family: "Ethereal Thin";
+  font-weight: 600;
+  color: #000000;
+}
+.photodiv h3 {
+  font-size: 2.5vh;
+  font-family: "Palatino Linotype";
+  color: #000000;
+  font-weight: 300;
+}
+.yellowtxt {
+  color: #f7b605;
+  cursor: pointer;
+}
+
+@keyframes my-animation {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes my-anim {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+#pg7maincontents {
+  width: 100%;
+  background-color: rgb(3, 3, 3);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  position: relative;
+  font-family: "Palatino Linotype";
+  padding-top: 5vh;
+  overflow: hidden;
+
+}
+
+#pg71 {
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3vw;
+  align-items: flex-start;
+  position: relative;
+  border-bottom: 2px solid rgb(255, 196, 0);
+  overflow: hidden;
+}
+#pg71 a {
+  color: white;
+  cursor: pointer;
+}
+
+#pg7maincontents h1 {
+  font-size: 2.8vw;
+  text-align: center;
+  font-family: "Palatino Linotype";
+  font-weight: 200;
+  color: #fff;
+}
+#pg71 h2 {
+  font-size: 2vw;
+  font-family: "Palatino Linotype";
+  color: #fff;
+}
+#pg71 h4 {
+  font-size: 1.2vw;
+  font-family: "Palatino Linotype";
+  color: #fff;
+}
+#col1 {
+  width: 23vw;
+  font-size: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#col4 {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(77, 4, 4);
+}
+#cont {
+  display: flex;
+  align-items: center;
+  font-size: 2vw;
+  margin: 2vh 0;
+  cursor: pointer;
+}
+
+#cont img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 1vw;
+}
+
+footer {
+  width: 100%;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Palatino Linotype";
+  padding: 2vh 1vw;
+}
+footer i {
+  font-size: 2.2vh;
+  margin: 0 1.2vw;
+}
+
+footer h5 {
+  font-size: 2vh;
+  font-family: "Palatino Linotype";
+  font-weight: 200;
+  color: #fff;
+}
+
+/* Events Page Starts here  */
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+section #events {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(7, 7, 7);
+  overflow: hidden;
+}
+
+.eventdiv {
+  position: relative;
+  top: 2vh;
+  left: 2vh;
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/evnetsimg/DHE_8973.JPG);
+  animation: chngbg 20s linear infinite;
+  background-position: center;
+  background-size: cover;
+}
+
+@keyframes chngbg {
+  100% {
+    background-image: url("../img/evnetsimg/IG0A6270.JPG");
+  }
+  75% {
+    background-image: url("../img/evnetsimg/FAI09051.JPG");
+  }
+  50% {
+    background-image: url("../img/evnetsimg/FAI09070.JPG");
+  }
+  25% {
+    background-image: url("../img/evnetsimg/FAI09088.JPG");
+  }
+  0% {
+    background-image: url("../img/evnetsimg/DHE_8973.JPG");
+  }
+}
+#upeve {
+  position: relative;
+  min-height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+}
+.upevents {
+  position: relative;
+  top: 2vh;
+  right: 2vh;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/evnetsimg/DSC_3157.JPG);
+}
+
+.risingdiv {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 2vh;
+  right: 2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.risingimg {
+  height: 100%;
+  width: 100%;
+}
+.risingimg img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ffffff !important;
+}
+
+.container {
+  min-height: 40vh;
+  margin-top: 2vh;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-family: "Palatino Linotype";
+  overflow: hidden;
+  transition: 0.5s all;
+  background-color: #000000;
+  color: #fff;
+}
+
+
+.slide-container {
+  height: 100%;
+  display: flex;
+  width: calc(850px * 14);
+  animation: scroll 30s linear infinite;
+  gap: 100px;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s all;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(calc(-850px * 5));
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide-text {
+  width: 850px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  perspective: 100px;
+  text-align: center;
+}
+
+.slide-text h1{
+  transition:0.5s all;
+  font-size: 2.5vh;
+  font-family: "Palatino Linotype";
+  font-weight: 400;
+}
+
+.slide-container:hover{
+  animation-play-state: paused;
+}
+.container:hover{
+  cursor: pointer;
+}
+
+.slide-text h1:hover{
+  scale: 1.2;
+  padding: 2vh;
+}
+
+.categoriescontents{
+  position: relative;
+  top: 2vh;
+  right: 2vh;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3px;
+  background-color: #ffffff;
+  border: 2px solid rgb(255, 255, 255);
+  padding: 5vh 0;
+}
+.categoriessubcontents{
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+.categoriessubcontents h3{
+  font-size: 2vh;
+}
+.categoriessubcontents h1{
+  font-size: 2vh;
+  z-index: 99;
+}
+.categoriessubcontents:hover.categoriessubcontents h3{
+  border-radius: 50%;
+  border: 2px solid #fff;
+  padding: 1.5vh;
+} 
+.categoriessubcontents:first-child h3{
+  border-radius: 50%;
+  border: 2px solid #fff;
+  padding: 1.5vh;
+}
+.categoriessubcontents:first-child .catimgbox{
+  opacity: 1;
+  display: flex;
+}
+
+.categoriessubcontents i{
+  font-size: 2vh;
+}
+.catimgbox{
+  position: relative;
+  height: 15vh;
+  width: 10vw;
+  transition: 1s all;
+  opacity: 0;
+  border: 2px solid #fff;
+  overflow: hidden;
+  transform: rotate(-14deg);
+}
+
+.catimgbox img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.categoriessubcontents:hover.categoriessubcontents>.catimgbox{
+  opacity: 1;
+  display: flex;
+}
+.categoriessubcontents:hover,.categoriessubcontents:first-child.categoriessubcontents.catimgbox{
+  opacity: 1;
+  display: flex;
+}
+.hometextdiv h5{
+  font-size: 2vh;
+  font-family: "Palatino Linotype";
+  font-weight: 400;
+  text-align: justify;
+}
+
+.hometextdiv span{
+  font-weight: 800;
+  font-size: 2.5vh;
+}
+
+.photocontainer{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 50px;
+  background-color: #000000;
+}
+
+.gallery{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content:space-between;
+  flex-wrap: wrap;
+}
+.dream img{
+  border: 2px solid #fff;
+  width: 100%;
+}
+
+.dream{
+width: 33%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactdet{
+  width: 100%;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2vh;
+  flex-wrap: wrap;
+}
+.contactdet i{
+  font-size: 3vh;
+}
+.subdet{
+  display: flex;
+  color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vh;
+  gap: 1.2vh;
+}
+
+.contactdet h4{
+  font-size: 2.2vh;
+}
+.addr{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.iconz{
+  width: 30%;
+  display: flex;
+  gap: 2vh;
+  align-items: flex-start;
+}
+
+#main .formmaindiv{
+  /* min-height: 90vh; */
+  padding: 4vh 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ background-color: #fff;
+}
+
+#main #submit-form {
+  position: relative;
+  margin: 5vh 0;
+  /* height: 60vh; */
+  width: 100%;
+  padding: 5vh;
+  /* background-color: #26a512; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1vh;
+  color: gray;
+}
+#main #submit-form .inputBox {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(247, 247, 247);
+}
+#main #submit-form .inputBox input {
+  width: 100%;
+  border: none;
+  background-color: rgb(255, 255, 255);
+}
+#main #submit-form select{
+  color: grey;
+}
+#main .diff {
+  font-size: 2vh;
+  width: 100%;
+  padding: 1.5vh;
+  border: none;
+  /* background-color: pink; */
+}
+#main .diff option:nth-child(1) {
+  color: grey;
+}
+#main #subject {
+  font-size: 2vh;
+  /* height: 20vh; */
+  border: none;
+  width: 100%;
+  /* background-color: #000; */
+  padding: 1.5vh;
+}
+#main #submit-form .inputBoxx {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  /* background-color: blue; */
+}
+
+#main #submit-form .gender{
+  /* padding: 0 2vw; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* background-color: red; */
+  gap: 0.2vw;
+}
+
+#main #submit-form .gender{
+  font-size: 1.6vh;
+  text-align: center;
+}
+#main #submit-form .inputBox input {
+  font-size: 2vh;
+  padding: 2vh;
+  color: black;
+}
+#main .inputBoxsubmit {
+  margin: 4vh 0;
+}
+#main .inputBoxsubmit input {
+  /* width: 10vw; */
+  font-size: 3vh;
+  color: #fff;
+  background-color: #030303;
+  padding: 1vh 2vh;
+  text-transform: capitalize;
+}
