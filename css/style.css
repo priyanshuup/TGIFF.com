@@ -1131,7 +1131,7 @@ width: 33%;
 }
 #main #subject {
   font-size: 2vh;
-  height: 20vh;
+  /* height: 20vh; */
   border: none;
   width: 100%;
   /* background-color: #000; */
