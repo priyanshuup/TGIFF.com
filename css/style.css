@@ -17,6 +17,7 @@ header {
   overflow: hidden;
 }
 
+
 li {
   list-style: none;
   font-family: "Ethereal Thin";
@@ -28,10 +29,11 @@ a {
   font-family: "Ethereal Thin";
 }
 
-body {
+html,body {
   height: 100%;
   width: 100%;
   background-color: rgb(255, 255, 255);
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -71,6 +73,7 @@ body {
 
 #main {
   background-color: rgb(255, 255, 255);
+  overflow: hidden;
 }
 
 .nav-menu {
@@ -163,7 +166,7 @@ body {
     display: block;
   }
   section #home .homediv{
-    height: 40vh;
+    min-height: 40vh;
   }
  
   section .borderdiv,section .categoriescontents, section .eventdiv,section .upevents,section .risingdiv{
@@ -244,7 +247,29 @@ body {
   #main .f5{
     display: none;
   }
-  
+
+#main #submit-form .inputBoxx,#main #submit-form .gender {
+  flex-wrap: wrap;
+}
+
+#main .submitopt{
+  /* height: 60vh; */
+  width: 90vw;
+  /* background-color: red; */
+}
+
+#main .submitopt .opthead h1{
+  font-size: 2.8vh;
+  letter-spacing: 2px;
+}
+#main #filmsubmission .submitopt h4{
+  font-size: 1.8vh;
+  letter-spacing: 2px;
+}
+
+#main #filmsubmission .submitopt .opthead i{
+  font-size:2rem;
+}
 }
 @media (min-width: 768px) and (max-width: 900px) {
   section #home,section #filmsubmission,section #events,section #upeve {
@@ -257,7 +282,26 @@ body {
   .hometextdiv h4,.photocontainer h4 {
     text-align: justify;
   }
- 
+  header {
+    position:relative;
+  }
+
+  #main .submitopt{
+    /* height: 60vh; */
+    width: 70vw;
+    /* background-color: red; */
+  }
+  #main #filmsubmission .submitopt .opthead h1{
+    font-size:4vh;
+    letter-spacing: 2px;
+  }
+  #main #filmsubmission .submitopt .opthead i{
+    font-size:3rem;
+  }
+  #main #filmsubmission .submitopt h4{
+    font-size: 2.2vh;
+    letter-spacing: 2px;
+  }
 }
 
 
@@ -265,7 +309,7 @@ body {
 
 #home {
   position: relative;
-  min-height: 100vh;
+  min-height: 90vh;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -349,7 +393,7 @@ body {
   font-family: "Palatino Linotype";
   font-weight: 300;
   text-align: justify;
-
+  line-height: 40px;
 }
 
 .hometextdiv button {
@@ -367,6 +411,7 @@ body {
 
 
 #filmsubmission {
+  position: relative;
   padding: 2vh 0;
   width: 100%;
   display: flex;
@@ -383,8 +428,82 @@ body {
 }
 
 #filmsubmission button {
+  padding: 1vh 2vh;
   background: black;
   color: #fff;
+  cursor: pointer;
+}
+
+.submitopt{
+  height: 60vh;
+  width: 60vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  position: absolute;
+  padding:1rem 2rem;
+  top: 50%;
+  left: -100%;
+  transform: translate(-50%,-50%);
+  background-color: #000000;
+  z-index: 99999;
+  transition: 0.8s ease-in-out;
+  /* scale: 0; */
+  /* transform-origin:right; */
+}
+#main .submitopt.active {
+  left: 50%;
+}
+#main .submitopt h1{
+  font-size: 5vh;
+  letter-spacing: 15px;
+  color: white;
+  font-family: 'Cinzel', serif;
+  color: #ff9d00;
+  text-align: center;
+
+}
+#main .submitopt a{
+  cursor: pointer;
+}
+#main .submitopt h4{
+  font-size: 2.5vh;
+  color: #fff;
+  letter-spacing: 2px;
+}
+#main .opthead{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+}
+.opthead i{
+  width: 20%;
+  font-size: 4rem;
+  color: #fff;
+  cursor: pointer;
+}
+.filmicons{
+  /* height: 10vh; */
+  /* width: 40vw; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2vw;
+  /* background-color: red; */
+  overflow: hidden;
+  padding: 1vh;
+  margin: 1vh 0;
+}
+.filmicons a{
+  height: 8vh;
+}
+.filmicons a img{
+  height: 100%;
+  /* width: 100%; */
   cursor: pointer;
 }
 .youtubediv {
@@ -530,6 +649,7 @@ iframe {
 }
 .yellowtxt {
   color: #f7b605;
+  cursor: pointer;
 }
 
 @keyframes my-animation {
@@ -962,3 +1082,97 @@ width: 33%;
   align-items: flex-start;
 }
 
+#main .formmaindiv{
+  /* min-height: 90vh; */
+  padding: 4vh 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ background-color: #fff;
+}
+
+#main #submit-form {
+  position: relative;
+  margin: 5vh 0;
+  /* height: 60vh; */
+  width: 100%;
+  padding: 5vh;
+  /* background-color: #26a512; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1vh;
+  color: gray;
+}
+#main #submit-form .inputBox {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(247, 247, 247);
+}
+#main #submit-form .inputBox input {
+  width: 100%;
+  border: none;
+  background-color: rgb(255, 255, 255);
+}
+#main #submit-form select{
+  color: grey;
+}
+#main .diff {
+  font-size: 2vh;
+  width: 100%;
+  padding: 1.5vh;
+  border: none;
+  /* background-color: pink; */
+}
+#main .diff option:nth-child(1) {
+  color: grey;
+}
+#main #subject {
+  font-size: 2vh;
+  height: 20vh;
+  border: none;
+  width: 100%;
+  /* background-color: #000; */
+  padding: 1.5vh;
+}
+#main #submit-form .inputBoxx {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  /* background-color: blue; */
+}
+
+#main #submit-form .gender{
+  /* padding: 0 2vw; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* background-color: red; */
+  gap: 0.2vw;
+}
+
+#main #submit-form .gender{
+  font-size: 1.6vh;
+  text-align: center;
+}
+#main #submit-form .inputBox input {
+  font-size: 2vh;
+  padding: 2vh;
+  color: black;
+}
+#main .inputBoxsubmit {
+  margin: 4vh 0;
+}
+#main .inputBoxsubmit input {
+  /* width: 10vw; */
+  font-size: 3vh;
+  color: #fff;
+  background-color: #030303;
+  padding: 1vh 2vh;
+  text-transform: capitalize;
+}

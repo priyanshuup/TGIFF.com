@@ -24,8 +24,6 @@ gsap.from("#home>.homediv", {
   gsap.from(".youtubediv",
     {
       x: 100,
-  
-      // delay:.5,
       opacity: 0,
       duration: 1,
   
@@ -34,18 +32,15 @@ gsap.from("#home>.homediv", {
     "-=1"
   );
   
-  gsap.from("#facilities", {
+  gsap.from(".f1", {
     scrollTrigger: {
-       start:"top 20%",
-        // end:"top 80%",
-      //   pin: true,
+       start:"top 50%",
       scroller: "#main",
       trigger: "#filmsubmission",
     },
     y: 20,
     opacity: 0,
-  //   delay:5,
-    duration: 1.2,
+    duration: 0.8,
     ease: Expo.easeInOut,
     skewY: 3,
   

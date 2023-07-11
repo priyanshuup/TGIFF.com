@@ -1,3 +1,5 @@
+// Navbar js 
+
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -12,6 +14,9 @@ document.querySelectorAll(".nav-link").forEach((n) =>
     navMenu.classList.remove("active");
   })
 );
+
+
+// Swiper Js
 
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 4,
@@ -51,3 +56,18 @@ breakpoints:{
   }
   },
 });
+
+// Submit option menu 
+
+const filmsubmissionbtn = document.querySelector("#filmsubmission button");
+const submitopt = document.querySelector("#main .submitopt");
+const closesubmitopt = document.querySelector("#main .ri-close-fill");
+
+
+  filmsubmissionbtn.addEventListener("click", () => {
+    submitopt.classList.toggle("active");
+  });
+  closesubmitopt.addEventListener("click", () => {
+    submitopt.classList.remove("active");
+  });
+  
